@@ -288,6 +288,7 @@ def input_given(input):
             return
         
         elif "translate to hindi" in input.lower():
+            voice("ok, translating.")
             translate(input)
             return
 

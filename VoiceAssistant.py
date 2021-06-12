@@ -161,6 +161,12 @@ def sleep(input):
     voice("Going to sleep mode")
     time.sleep(10)
     voice("Terminating sleep mode")
+    
+
+def translate(input):
+    from googletrans import Translator
+    translator = Translator()
+    voice((translator.translate(input.lower()[18:], dest = 'hi')).text)    
 
 
 def search(input):
@@ -279,6 +285,10 @@ def input_given(input):
 
         elif "sleep" in input.lower() or 'rest' in input.lower():
             sleep(input)
+            return
+        
+        elif "translate to hindi" in input.lower():
+            translate(input)
             return
 
 

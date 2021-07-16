@@ -369,7 +369,7 @@ class MyAssistant():
         except:
             voice("Hello")
               
-        while(1):
+        while(True):
           
                 voice("How can i help you?")
                 text = getting_audio()

@@ -377,7 +377,7 @@ class MyAssistant():
                 if text == 0:
                     continue
       
-                elif "exit" in str(text) or "bye" in str(text) or "stop" in str(text):
+                elif "exit" in str(text) or "bye" in str(text) or "stop" in str(text) or "terminate" in str(text):
                     voice("bye buddy, "+ "have a great time"+'.')
                     break
             

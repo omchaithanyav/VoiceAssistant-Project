@@ -310,6 +310,12 @@ def input_given(input):
             speak = 'The current time is %d hours %d minutes' % (now.hour, now.minute)
             voice(speak)
             return
+
+        elif 'today' in input.lower():
+            days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+            now = datetime.now()
+            day = days[now.weekday()]
+            voice(day)
             
   
         elif 'open' in input.lower():
@@ -369,7 +375,7 @@ class MyAssistant():
         except:
             voice("Hello")
               
-        while(True):
+        while(1):
           
                 voice("How can i help you?")
                 text = getting_audio()
